@@ -1,21 +1,34 @@
 package session_01;
+//
+import session_02.*;
 
 import java.util.Scanner;
 
 public class Main {
-    int x=10;
+    int x = 10;
     static int y = 20;
     static final int z = 40;
 
-    public static void main(String args[]){
+    public static void main(String args[]) {
+Human human = new Human();
+human.name="abc";
+human.inPutInTo();
+human.showInfo();
+
+        class Asian extends Human {
+            public void run() {
+                this.age = 20;
+                this.name = "Do Quoc Vuong";
+            }
+        }
 
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
-        System.out.println("So vua nhap: "+n);
+        System.out.println("So vua nhap: " + n);
         double n2 = scanner.nextDouble();// nhap vao 1 so thuc
         String str = scanner.nextLine();// nhap vao 1 chuoi
-        for (int i=0;i<10;i++){
-            System.out.println("i="+i);
+        for (int i = 0; i < 10; i++) {
+            System.out.println("i=" + i);
         }
 
         Main m = new Main();
@@ -23,18 +36,18 @@ public class Main {
         m.x = m.x + 10;
         System.out.println(m.x);
 
-        System.out.println("y= "+Main.y);
-        Main.y +=10;
-        System.out.println("y= "+Main.y);
+        System.out.println("y= " + Main.y);
+        Main.y += 10;
+        System.out.println("y= " + Main.y);
 
-        System.out.println("z= "+Main.z);
+        System.out.println("z= " + Main.z);
         //Main.z ++;
 
-        Main.y = m.x%2==0 ? m.x : 20;
+        Main.y = m.x % 2 == 0 ? m.x : 20;
 
-        if(m.x %2==0){
+        if (m.x % 2 == 0) {
             Main.y = m.x;
-        }else {
+        } else {
             Main.y = 20;
         }
 
